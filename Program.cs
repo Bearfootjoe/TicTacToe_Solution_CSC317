@@ -16,7 +16,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new TicTacToe());
         }
     }
 }
