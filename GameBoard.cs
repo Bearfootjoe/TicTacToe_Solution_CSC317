@@ -21,10 +21,5 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

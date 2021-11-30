@@ -15,14 +15,13 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
         public TicTacToe()
         {
             InitializeComponent();
-            Players Player1 = new Players();
-            Players Player2 = new Players();
+            PlayerClass Player1;
+            PlayerClass Player2;
         }
-
-        private void TicTacToe_Load(object sender, EventArgs e)
+        public void TicTacToe_Load(object sender, EventArgs e)
         {
 
-        }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
@@ -33,7 +32,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
         {
             
         }
-
         private void Btn_Player1TitleColor_Click(object sender, EventArgs e)
         {
             ColorDialog MyDialog = new ColorDialog();
@@ -64,10 +62,10 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
 
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
+
             {
                 Btn_Player1CharacterColor.ForeColor = MyDialog.Color;
                 Btn_Player1CharacterColor.BackColor = MyDialog.Color;
-
             }
         }
         private void Btn_Player2CharacterColor_Click(object sender, EventArgs e)
@@ -104,14 +102,12 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
                 Btn_Player2TitleColor.BackColor = MyDialog.Color;
             }
         }
-
         private void Btn_Player1Ready_Click(object sender, EventArgs e)
         {
             Btn_Player1Ready.Text = "Player 1 Ready!!";
             Btn_Player1Ready.BackColor = Btn_Player1CharacterColor.BackColor;
 
         }
-
         private void Btn_Player2Ready_Click(object sender, EventArgs e)
         {
             Btn_Player2Ready.Text = "Player 2 Ready!!";
@@ -119,22 +115,22 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
 
             if (Btn_Player1Ready.Enabled == true && Btn_Player2Ready.Enabled == true)
             {
-                // Initiate game form
+                Form f2 = new GameBoard();
+                f2.Show(); // Shows GameBoard();
+                this.Close();
+                
             }
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
             label1.BackColor = Btn_Player1TitleColor.BackColor;
             label11.BackColor = Btn_Player1TitleColor.BackColor;
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
             label2.BackColor = Btn_Player1TitleColor.BackColor;
             label12.BackColor = Btn_Player1TitleColor.BackColor;
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
             label3.BackColor = Btn_Player1TitleColor.BackColor;
@@ -155,7 +151,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             label6.BackColor = Btn_Player1TitleColor.BackColor;
             label16.BackColor = Btn_Player1TitleColor.BackColor;
         }
-
         private void label7_Click(object sender, EventArgs e)
         {
             label7.BackColor = Btn_Player1TitleColor.BackColor;
@@ -166,57 +161,80 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             label8.BackColor = Btn_Player1TitleColor.BackColor;
             label18.BackColor = Btn_Player1TitleColor.BackColor;
         }
-
-
-        public class Players
-        {
-            public string name;
-            public string character;
-        }
-
         private void label11_Click(object sender, EventArgs e)
         {
-
+            if (label11.BackColor == Btn_Player1TitleColor.BackColor)
+                return;
+            else
+            {
+                label11.BackColor = Btn_Player2TitleColor.BackColor;
+            }
         }
-
         private void label12_Click(object sender, EventArgs e)
         {
-
+            if (label12.BackColor == Btn_Player1TitleColor.BackColor)
+            return;
+            else
+            {
+                label12.BackColor = Btn_Player2TitleColor.BackColor;
+            }
         }
-
         private void label13_Click(object sender, EventArgs e)
         {
-
+            if (label13.BackColor == Btn_Player1TitleColor.BackColor)
+                return;
+            else
+            {
+                label13.BackColor = Btn_Player2TitleColor.BackColor;
+            }
         }
-
         private void label14_Click(object sender, EventArgs e)
         {
-
+            if (label14.BackColor == Btn_Player1TitleColor.BackColor)
+                return;
+            else
+            {
+                label14.BackColor = Btn_Player2TitleColor.BackColor;
+            }
         }
-
         private void label15_Click(object sender, EventArgs e)
         {
-
+            if (label15.BackColor == Btn_Player1TitleColor.BackColor)
+                return;
+            else
+            {
+                label15.BackColor = Btn_Player2TitleColor.BackColor;
+            }
         }
-
         private void label16_Click(object sender, EventArgs e)
         {
-
+            if (label16.BackColor == Btn_Player1TitleColor.BackColor)
+                return;
+            else
+            {
+                label16.BackColor = Btn_Player2TitleColor.BackColor;
+            }
         }
-
         private void label17_Click(object sender, EventArgs e)
         {
-
+            if (label17.BackColor == Btn_Player1TitleColor.BackColor)
+                return;
+            else
+            {
+                label17.BackColor = Btn_Player2TitleColor.BackColor;
+            }
         }
-
         private void label18_Click(object sender, EventArgs e)
         {
-
+            if (label18.BackColor == Btn_Player1TitleColor.BackColor)
+                return;
+            else
+            {
+                label18.BackColor = Btn_Player2TitleColor.BackColor;
+            }
         }
 
-        private void Lbl_CharacterColorP2_Click(object sender, EventArgs e)
-        {
 
-        }
+
     }
 }
