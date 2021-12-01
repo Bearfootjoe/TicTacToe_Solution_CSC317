@@ -34,8 +34,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
         {
             
         }
-
-
         private void Btn_Player1TitleColor_Click(object sender, EventArgs e)
         {
             ColorDialog MyDialog = new ColorDialog();
@@ -52,7 +50,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
                 Btn_Player1TitleColor.ForeColor = MyDialog.Color;
                 Btn_Player1TitleColor.BackColor = MyDialog.Color;
                 this.Player1.backColor = MyDialog.Color;
-                this.Player1.name = Txt_Player1_Name.Text;
             }
 
         }
@@ -64,7 +61,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             // Allows the user to get help. (The default is false.)
             MyDialog.ShowHelp = true;
             // Sets the initial color select to the current text color.
-            MyDialog.Color = Txt_Player1_Name.ForeColor;
+           // MyDialog.Color = Txt_Player1_Name.ForeColor;
 
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
@@ -84,7 +81,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             // Allows the user to get help. (The default is false.)
             MyDialog.ShowHelp = true;
             // Sets the initial color select to the current text color.
-            MyDialog.Color = Txt_Player1_Name.ForeColor;
+           // MyDialog.Color = Txt_Player1_Name.ForeColor;
 
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
@@ -92,7 +89,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
                 Btn_Player2CharacterColor.ForeColor = MyDialog.Color;
                 Btn_Player2CharacterColor.BackColor = MyDialog.Color;
                 this.Player2.backColor = MyDialog.Color;
-                this.Player2.name = Txt_Player2_Name.Text;
             }
         }
         private void Btn_Player2TitleColor_Click_1(object sender, EventArgs e)
@@ -103,7 +99,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             // Allows the user to get help. (The default is false.)
             MyDialog.ShowHelp = true;
             // Sets the initial color select to the current text color.
-            MyDialog.Color = Txt_Player1_Name.ForeColor;
+            //MyDialog.Color = Txt_Player1_Name.ForeColor;
 
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
@@ -117,6 +113,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
         {
             Btn_Player1Ready.Text = "Player 1 Ready!!";
             Btn_Player1Ready.BackColor = Btn_Player1CharacterColor.BackColor;
+            this.Player1.name = Txt_Player1_Name.Text;
             GameStartFlag = true;
 
         }
@@ -125,9 +122,10 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             Btn_Player2Ready.Text = "Player 2 Ready!!";
             Btn_Player2Ready.BackColor = Btn_Player2CharacterColor.BackColor;
 
-            if (GameStartFlag = true && Btn_Player2Ready.Enabled == true)
+            if (GameStartFlag == true)
             {
-                Form f2 = new GameBoard();
+                this.Player2.name = Txt_Player2_Name.Text;
+                Form f2 = new GameBoard(Player1, Player1);
                 f2.Show(); // Shows GameBoard();   
             }
         }
@@ -135,41 +133,49 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
         {
             label1.BackColor = Btn_Player1TitleColor.BackColor;
             label11.BackColor = Btn_Player1TitleColor.BackColor;
+            this.Player1.character = label1.Text;
         }
         private void label2_Click(object sender, EventArgs e)
         {
             label2.BackColor = Btn_Player1TitleColor.BackColor;
             label12.BackColor = Btn_Player1TitleColor.BackColor;
+            this.Player1.character = label2.Text;
         }
         private void label3_Click(object sender, EventArgs e)
         {
             label3.BackColor = Btn_Player1TitleColor.BackColor;
             label13.BackColor = Btn_Player1TitleColor.BackColor;
+            this.Player1.character = label3.Text;
         }
         private void label4_Click(object sender, EventArgs e)
         {
             label4.BackColor = Btn_Player1TitleColor.BackColor;
             label14.BackColor = Btn_Player1TitleColor.BackColor;
+            this.Player1.character = label4.Text;
         }
         private void label5_Click(object sender, EventArgs e)
         {
             label5.BackColor = Btn_Player1TitleColor.BackColor;
             label15.BackColor = Btn_Player1TitleColor.BackColor;
+            this.Player1.character = label5.Text;
         }
         private void label6_Click(object sender, EventArgs e)
         {
             label6.BackColor = Btn_Player1TitleColor.BackColor;
             label16.BackColor = Btn_Player1TitleColor.BackColor;
+            this.Player1.character = label6.Text;
         }
         private void label7_Click(object sender, EventArgs e)
         {
             label7.BackColor = Btn_Player1TitleColor.BackColor;
             label17.BackColor = Btn_Player1TitleColor.BackColor;
+            this.Player1.character = label7.Text;
         }
         private void label8_Click(object sender, EventArgs e)
         {
             label8.BackColor = Btn_Player1TitleColor.BackColor;
             label18.BackColor = Btn_Player1TitleColor.BackColor;
+            this.Player1.character = label8.Text;
         }
         private void label11_Click(object sender, EventArgs e)
         {
@@ -178,6 +184,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             else
             {
                 label11.BackColor = Btn_Player2TitleColor.BackColor;
+                this.Player2.character = label11.Text;
             }
         }
         private void label12_Click(object sender, EventArgs e)
@@ -187,6 +194,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             else
             {
                 label12.BackColor = Btn_Player2TitleColor.BackColor;
+                this.Player2.character = label12.Text;
             }
         }
         private void label13_Click(object sender, EventArgs e)
@@ -196,6 +204,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             else
             {
                 label13.BackColor = Btn_Player2TitleColor.BackColor;
+                this.Player2.character = label13.Text;
             }
         }
         private void label14_Click(object sender, EventArgs e)
@@ -205,6 +214,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             else
             {
                 label14.BackColor = Btn_Player2TitleColor.BackColor;
+                this.Player2.character = label14.Text;
             }
         }
         private void label15_Click(object sender, EventArgs e)
@@ -214,6 +224,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             else
             {
                 label15.BackColor = Btn_Player2TitleColor.BackColor;
+                this.Player2.character = label15.Text;
             }
         }
         private void label16_Click(object sender, EventArgs e)
@@ -223,6 +234,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             else
             {
                 label16.BackColor = Btn_Player2TitleColor.BackColor;
+                this.Player2.character = label16.Text;
             }
         }
         private void label17_Click(object sender, EventArgs e)
@@ -232,6 +244,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             else
             {
                 label17.BackColor = Btn_Player2TitleColor.BackColor;
+                this.Player2.character = label17.Text;
             }
         }
         private void label18_Click(object sender, EventArgs e)
@@ -241,6 +254,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             else
             {
                 label18.BackColor = Btn_Player2TitleColor.BackColor;
+                this.Player2.character = label18.Text;
             }
         }
 
