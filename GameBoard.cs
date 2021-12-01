@@ -41,8 +41,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_Player2Character.BackColor = P2.backColor;
             this.Lbl_Player2Character.ForeColor = P2.foreColor;
             this.Lbl_Player2Character.Text = P2.character;
-
-
         }
     }
 }

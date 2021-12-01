@@ -64,7 +64,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             // 
             this.Lbl_Player2Name.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Player2Name.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.Lbl_Player2Name.Location = new System.Drawing.Point(267, 4);
+            this.Lbl_Player2Name.Location = new System.Drawing.Point(256, 4);
             this.Lbl_Player2Name.Name = "Lbl_Player2Name";
             this.Lbl_Player2Name.Size = new System.Drawing.Size(156, 38);
             this.Lbl_Player2Name.TabIndex = 1;

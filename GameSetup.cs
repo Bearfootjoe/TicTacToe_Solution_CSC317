@@ -125,7 +125,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             if (GameStartFlag == true)
             {
                 this.Player2.name = Txt_Player2_Name.Text;
-                Form f2 = new GameBoard(Player1, Player1);
+                Form f2 = new GameBoard(Player1, Player2);
                 f2.Show(); // Shows GameBoard();   
             }
         }
