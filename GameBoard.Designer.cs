@@ -93,7 +93,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(454, 312);
             this.tableLayoutPanel1.TabIndex = 2;
-            this.tableLayoutPanel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel1_MouseClick);
             // 
             // Lbl_pos1
             // 
@@ -105,7 +104,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos1.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos1.TabIndex = 0;
             this.Lbl_pos1.Text = "¨";
-            this.Lbl_pos1.Click += new System.EventHandler(this.Lbl_pos1_Click);
             // 
             // Lbl_pos2
             // 
@@ -117,7 +115,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos2.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos2.TabIndex = 1;
             this.Lbl_pos2.Text = "¨";
-            this.Lbl_pos2.Click += new System.EventHandler(this.Lbl_pos2_Click);
             // 
             // Lbl_pos3
             // 
@@ -129,7 +126,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos3.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos3.TabIndex = 2;
             this.Lbl_pos3.Text = "¨";
-            this.Lbl_pos3.Click += new System.EventHandler(this.Lbl_pos3_Click);
             // 
             // Lbl_pos4
             // 
@@ -141,7 +137,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos4.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos4.TabIndex = 3;
             this.Lbl_pos4.Text = "¨";
-            this.Lbl_pos4.Click += new System.EventHandler(this.Lbl_pos4_Click);
             // 
             // Lbl_pos5
             // 
@@ -153,7 +148,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos5.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos5.TabIndex = 4;
             this.Lbl_pos5.Text = "¨";
-            this.Lbl_pos5.Click += new System.EventHandler(this.Lbl_pos5_Click);
             // 
             // Lbl_pos6
             // 
@@ -165,7 +159,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos6.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos6.TabIndex = 5;
             this.Lbl_pos6.Text = "¨";
-            this.Lbl_pos6.Click += new System.EventHandler(this.Lbl_pos6_Click);
             // 
             // Lbl_pos7
             // 
@@ -177,7 +170,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos7.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos7.TabIndex = 6;
             this.Lbl_pos7.Text = "¨";
-            this.Lbl_pos7.Click += new System.EventHandler(this.Lbl_pos7_Click);
             // 
             // Lbl_pos8
             // 
@@ -189,7 +181,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos8.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos8.TabIndex = 7;
             this.Lbl_pos8.Text = "¨";
-            this.Lbl_pos8.Click += new System.EventHandler(this.Lbl_pos8_Click);
             // 
             // Lbl_pos9
             // 
@@ -201,7 +192,6 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
             this.Lbl_pos9.Size = new System.Drawing.Size(66, 53);
             this.Lbl_pos9.TabIndex = 8;
             this.Lbl_pos9.Text = "¨";
-            this.Lbl_pos9.Click += new System.EventHandler(this.Lbl_pos9_Click);
             // 
             // Lbl_Player1Character
             // 

@@ -113,7 +113,7 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
         {
             Btn_Player1Ready.Text = "Player 1 Ready!!";
             Btn_Player1Ready.BackColor = Btn_Player1CharacterColor.BackColor;
-            Player1.name = Txt_Player1_Name.Text;
+            this.Player1.name = Txt_Player1_Name.Text;
             GameStartFlag = true;
 
         }
@@ -124,8 +124,8 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
 
             if (GameStartFlag == true)
             {
-                Player2.name = Txt_Player2_Name.Text;
-                Form f2 = new GameBoard();
+                this.Player2.name = Txt_Player2_Name.Text;
+                Form f2 = new GameBoard(Player1, Player2);
                 f2.Show(); // Shows GameBoard();   
             }
         }
@@ -256,6 +256,14 @@ namespace Heirendt_Joseph_CSC317_TicTacToe_Solution
                 label18.BackColor = Btn_Player2TitleColor.BackColor;
                 this.Player2.character = label18.Text;
             }
+        }
+
+        public class Players
+        {
+            public string name;
+            public string character;
+            public System.Drawing.Color foreColor;
+            public System.Drawing.Color backColor;
         }
     }
 }
